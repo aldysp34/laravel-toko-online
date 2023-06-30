@@ -10,6 +10,7 @@
           </div>
 
           <!-- NAV -->
+          @auth
           <div class="collapse navbar-collapse" id="nav-open-btn">
             <ul class="nav">
                 <li> <a href="{{ url('/home') }}">Home </a> </li>
@@ -17,6 +18,7 @@
 
 
               <!-- MEGA MENU -->
+              
               <li class="dropdown megamenu"> <a href="#." class="dropdown-toggle" data-toggle="dropdown">store</a>
                 <div class="dropdown-menu">
                   <div class="row">
@@ -37,10 +39,11 @@
                   </div>
                 </div>
               </li>
+              
               <li> <a href="contact.html"> contact</a> </li>
             </ul>
           </div>
-
+          @endauth
           <!-- Nav Right -->
           <div class="nav-right">
             <ul class="navbar-right">
@@ -66,6 +69,8 @@
                 </ul>
               </li>
               @endguest
+
+              @auth
               <!-- USER BASKET -->
               <li class="dropdown user-basket"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true"><i class="icon-basket-loaded"></i> </a>
                 <ul class="dropdown-menu">
@@ -93,7 +98,7 @@
                   </li>
                 </ul>
               </li>
-
+              @endauth
               <!-- SEARCH BAR -->
               <li class="dropdown"> <a href="javascript:void(0);" class="search-open"><i class=" icon-magnifier"></i></a>
                 <div class="search-inside animated bounceInUp"> <i class="icon-close search-close"></i>
